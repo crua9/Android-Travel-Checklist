@@ -1,0 +1,105 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f3e6d3"
+    tools:context="com.techreviewsandhelp.travelchecklist.CheckListActivity" >
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="5dp"
+        android:text="Name Your Trip"
+        android:textColor="@android:color/black"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/ET_TripName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView0"
+        android:ems="10"
+        android:hint="Trip Name"
+        android:paddingLeft="5dp"
+        android:textColorHint="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/spinner1"
+        android:layout_below="@+id/ET_TripName"
+        android:paddingLeft="5dp"
+        android:text="Where to Go"
+        android:textColor="@android:color/black"
+        android:textSize="20dp" />
+
+    <LinearLayout
+        android:id="@+id/layperson"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView4" >
+
+        <EditText
+            android:id="@+id/ET_personName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Enter Person Name" />
+
+        <Button
+            android:id="@+id/BTN_addPerson"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/border"
+            android:drawableStart="@android:drawable/ic_input_add"
+            android:text="ADD"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/spinner1"
+        android:paddingLeft="5dp"
+        android:text="Add Trip Persons"
+        android:textColor="@android:color/black"
+        android:textSize="20dp" />
+
+    <ListView
+        android:id="@+id/LV_personList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/IV_GoBTN"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/layperson"
+        android:background="@drawable/list"
+        android:paddingLeft="5dp" >
+    </ListView>
+
+    <Button
+        android:id="@+id/IV_GoBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="5dp"
+        android:background="@drawable/border"
+        android:drawableLeft="@drawable/ic_launcher"
+        android:text="NEXT"
+        android:textColor="@android:color/white" />
+
+</RelativeLayout>
